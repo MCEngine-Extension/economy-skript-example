@@ -2,7 +2,7 @@ package io.github.mcengine.extension.skript.economy.example;
 
 import io.github.mcengine.api.core.MCEngineCoreApi;
 import io.github.mcengine.api.core.extension.logger.MCEngineExtensionLogger;
-import io.github.mcengine.api.economy.extension.api.IMCEngineEconomyAPI;
+import io.github.mcengine.api.economy.extension.skript.IMCEngineEconomySkript;
 
 import io.github.mcengine.extension.skript.economy.example.command.EconomySkriptCommand;
 import io.github.mcengine.extension.skript.economy.example.listener.EconomySkriptListener;
@@ -21,11 +21,9 @@ import java.lang.reflect.Field;
  * Main class for the Economy <b>Skript</b> example module.
  * <p>
  * Registers the {@code /economyskriptexample} command and related event listeners.
- * <p>
- * Migrated from the previous “API” naming to “Skript” while preserving
- * {@link IMCEngineEconomyAPI} integration for compatibility.
+ * Integrates with the {@link IMCEngineEconomySkript} lifecycle.
  */
-public class ExampleEconomySkript implements IMCEngineEconomyAPI {
+public class ExampleEconomySkript implements IMCEngineEconomySkript {
 
     /** Custom extension logger for this module, with contextual labeling. */
     private MCEngineExtensionLogger logger;
